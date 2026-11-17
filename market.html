@@ -3,11 +3,56 @@
 <head>
   <meta charset="utf-8">
   <style>
-    html, body { margin: 0; padding: 0; height: 550px; overflow: hidden; }
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
   </style>
 </head>
 <body>
-  <script type="module" src="https://tradingview-widget.com"></script>
-  <tv-market-overview style="display:block; width:100%; height:550px;" symbol-sectors="[{&quot;sectionName&quot;:&quot;Indices&quot;,&quot;symbols&quot;:[&quot;FOREXCOM:DJI&quot;,&quot;AMEX:UPRO&quot;,&quot;NASDAQ:AMDL&quot;,&quot;AMEX:DGRO&quot;,&quot;AMEX:SNOY&quot;,&quot;NASDAQ:TSYY&quot;]},{&quot;sectionName&quot;:&quot;Stocks&quot;,&quot;symbols&quot;:[&quot;NASDAQ:AAPL&quot;,&quot;NASDAQ:ADBE&quot;,&quot;NASDAQ:NVDA&quot;,&quot;NASDAQ:TSLA&quot;]},{&quot;sectionName&quot;:&quot;Crypto&quot;,&quot;symbols&quot;:[&quot;BITSTAMP:BTCUSD&quot;,&quot;BITSTAMP:ETHUSD&quot;,&quot;CRYPTO:XRPUSD&quot;]}]"></tv-market-overview>
+  <div class="tradingview-widget-container" style="height:100%;width:100%">
+    <div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
+    <script type="text/javascript" src="https://tradingview.com" async>
+    {
+      "colorTheme": "light",
+      "dateRange": "12M",
+      "showChart": true,
+      "locale": "en",
+      "width": "100%",
+      "height": "100%",
+      "largeChartUrl": "",
+      "isTransparent": false,
+      "showSymbolLogo": true,
+      "showFloatingTooltip": false,
+      "tabs": [
+        {
+          "title": "Indices",
+          "symbols": [
+            { "s": "FOREXCOM:DJI" },
+            { "s": "AMEX:UPRO" },
+            { "s": "NASDAQ:AMDL" },
+            { "s": "AMEX:DGRO" },
+            { "s": "AMEX:SNOY" },
+            { "s": "NASDAQ:TSYY" }
+          ]
+        },
+        {
+          "title": "Stocks",
+          "symbols": [
+            { "s": "NASDAQ:AAPL" },
+            { "s": "NASDAQ:ADBE" },
+            { "s": "NASDAQ:NVDA" },
+            { "s": "NASDAQ:TSLA" }
+          ]
+        },
+        {
+          "title": "Crypto",
+          "symbols": [
+            { "s": "BITSTAMP:BTCUSD" },
+            { "s": "BITSTAMP:ETHUSD" },
+            { "s": "CRYPTO:XRPUSD" }
+          ]
+        }
+      ]
+    }
+    </script>
+  </div>
 </body>
 </html>
